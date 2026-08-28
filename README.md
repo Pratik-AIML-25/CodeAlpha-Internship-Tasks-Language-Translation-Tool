@@ -2,6 +2,9 @@
 
 A small, self-contained web app for translating text between languages, built with plain HTML, CSS, and JavaScript (no build step, no framework).
 
+## 🚀 Live Demo
+
+View Lingua Translator → https://pratik-aiml-25.github.io/CodeAlpha-Internship-Tasks-Language-Translation-Tool/
 ## Overview
 
 Lingua lets you type or paste text, pick a source and target language, and get a translation back from a free public translation API. It also supports text-to-speech playback, copying the result, and a local history of your last few translations.
