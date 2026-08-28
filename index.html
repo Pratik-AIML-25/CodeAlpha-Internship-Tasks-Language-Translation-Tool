@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lingua — Translation Tool</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="brand">Lingua<span>.</span></div>
+      <div class="tagline">a small tool for moving words between languages</div>
+    </div>
+  </header>
+
+  <div class="panels">
+    <div class="panel left">
+      <div class="panel-head">
+        <div class="lang-label">
+          <select id="sourceLang" aria-label="Source language"></select>
+        </div>
+        <button class="icon-btn" id="listenSource" title="Listen to source text">🔊 Listen</button>
+      </div>
+      <textarea id="sourceText" placeholder="Type or paste text here…" maxlength="500"></textarea>
+      <div class="char-count"><span id="charCount">0</span> / 500</div>
+    </div>
+
+    <div class="swap-rail">
+      <button class="swap-btn" id="swapBtn" title="Swap languages" aria-label="Swap languages">⇄</button>
+    </div>
+
+    <div class="panel right">
+      <div class="panel-head">
+        <div class="lang-label">
+          <select id="targetLang" aria-label="Target language"></select>
+        </div>
+        <button class="icon-btn" id="listenTarget" title="Listen to translation" disabled>🔊 Listen</button>
+      </div>
+      <div class="output-text placeholder" id="outputText">Your translation will appear here.</div>
+      <div class="actions-row">
+        <span></span>
+        <div class="icon-btns">
+          <button class="icon-btn" id="copyBtn" disabled>⧉ Copy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="translate-bar">
+    <button class="translate-btn" id="translateBtn">
+      <span class="dot"></span> Translate
+    </button>
+  </div>
+  <div class="kbd-hint" id="kbdHint">
+    <kbd id="kbdModKey">Ctrl</kbd> + <kbd>Enter</kbd> to translate
+  </div>
+  <div class="status" id="status"></div>
+
+  <section class="history-panel" id="historyPanel">
+    <div class="history-head">
+      <span class="history-title">Recent Translations</span>
+      <button class="icon-btn" id="clearHistoryBtn">✕ Clear history</button>
+    </div>
+    <ul class="history-list" id="historyList">
+      <li class="history-empty" id="historyEmpty">No translations yet — your last few will show up here.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span>MyMemory Translation API • Free anonymous access</span>
+    <span>No API key required</span>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
